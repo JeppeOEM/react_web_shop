@@ -1,0 +1,36 @@
+:root {
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: white;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.App {
+  display: grid;
+  grid-template-columns: auto 200px;
+}
+.Header {
+  background-color: blue;
+}
+
+.ProductList {
+  display: grid;
+  background-color: lightblue;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.Product {
+  background-color: hotpink;
+}
+
+.Basket {
+  background-color: yellowgreen;
+}
