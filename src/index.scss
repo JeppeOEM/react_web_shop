@@ -25,10 +25,14 @@ img {
   display: grid;
   background-color: lightblue;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
 }
 
 .Product {
   background-color: hotpink;
+  h2 {
+    height: 30px;
+  }
 }
 
 .Basket {
