@@ -1,10 +1,13 @@
 function Product(props) {
+  function add() {
+    props.addToCart(props.data);
+  }
   return (
     <article className="Product">
-      <h2>{props.productDisplayname}</h2>
+      <h2>{props.data.productDisplayname}</h2>
       <p>123</p>
-      <img src={`https://kea-alt-del.dk/t7/images/webp/640/${props.id}.webp`} alt={props.productDisplayname} />
-      <button>add to basket</button>
+      <img src={`https://kea-alt-del.dk/t7/images/webp/640/${props.data.id}.webp`} alt={props.data.productDisplayname} />
+      <button onClick={add}>add to basket</button>
     </article>
   );
 }
