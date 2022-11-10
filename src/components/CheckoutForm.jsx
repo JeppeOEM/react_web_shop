@@ -5,15 +5,18 @@ import { insertOrder } from "../modules/db";
 function CheckoutForm(props) {
   const theForm = useRef(null);
 
-  function submit(e) {
+  async function submit(e) {
     e.preventDefault();
-    theForm.current.elements.name.value;
-    insertOrder({
+
+    /*    theForm.current.elements.name.value; */
+
+    const response = await insertOrder({
       name: theForm.current.elements.name.value,
       email: theForm.current.elements.email.value,
       address: theForm.current.elements.address.value,
       basket: props.cart,
     });
+    console.log("rsp", response);
   }
 
   return (
