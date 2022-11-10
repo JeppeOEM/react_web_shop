@@ -1,9 +1,10 @@
 import React from "react";
-import { useRef } from "react"; //we can go inside the dome and change something
+import { useRef, useState } from "react"; //we can go inside the dome and change something
 import { insertOrder } from "../modules/db";
 
 function CheckoutForm(props) {
   const theForm = useRef(null);
+  const [patementCompleted, setPayementCompleted] = useState(false);
 
   async function submit(e) {
     e.preventDefault();
@@ -17,25 +18,34 @@ function CheckoutForm(props) {
       basket: props.cart,
     });
     console.log("rsp", response);
+    if (response && response.length) {
+      setPayementCompleted(true);
+    }
   }
 
   return (
-    <form onSubmit={submit} ref={theForm}>
-      <div className="form-control">
-        <br></br>
-        <label htmlFor="form-name">Name</label>
-        <input required type="text" name="name" id="form-name" />
-      </div>
-      <div className="form-control">
-        <label htmlFor="form-email">Email</label>
-        <input required type="email" name="email" id="form-email" />
-      </div>
-      <div className="form-control">
-        <label htmlFor="form-address">Address</label>
-        <textarea required name="address" id="address-name" />
-      </div>
-      <button>pay</button>
-    </form>
+    <>
+      {patementCompleted ? (
+        <p>Thanks</p>
+      ) : (
+        <form onSubmit={submit} ref={theForm}>
+          <div className="form-control">
+            <br></br>
+            <label htmlFor="form-name">Name</label>
+            <input required type="text" name="name" id="form-name" />
+          </div>
+          <div className="form-control">
+            <label htmlFor="form-email">Email</label>
+            <input required type="email" name="email" id="form-email" />
+          </div>
+          <div className="form-control">
+            <label htmlFor="form-address">Address</label>
+            <textarea required name="address" id="address-name" />
+          </div>
+          <button>pay</button>
+        </form>
+      )}
+    </>
   );
 }
 
