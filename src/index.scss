@@ -20,7 +20,6 @@ img {
 
 .ProductList {
   display: grid;
-  background-color: lightblue;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1rem;
 }
