@@ -1,5 +1,6 @@
 import { useState } from "react";
 import CheckoutForm from "./CheckoutForm";
+import Header from "./Header";
 
 function Basket(props) {
   const [showForm, setShowForm] = useState(false);
@@ -12,6 +13,7 @@ function Basket(props) {
   }
   return (
     <section className="Basket">
+      <Header></Header>
       <ul>
         {props.cart.map((item) => (
           <li key={item.id}>

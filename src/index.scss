@@ -3,9 +3,10 @@
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
-
   color-scheme: light dark;
-  color: white;
+  color: black;
+  padding: 0;
+  margin: 0;
 }
 
 img {
@@ -19,6 +20,7 @@ img {
 }
 
 .ProductList {
+  margin-top: 15%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1rem;
@@ -28,4 +30,16 @@ img {
   h2 {
     height: 30px;
   }
+}
+.Basket {
+  margin: -0.6rem;
+  position: fixed;
+  background-color: white;
+  width: 100%;
+}
+
+.App {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(2, 15% 1fr);
 }
