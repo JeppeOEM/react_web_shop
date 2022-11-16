@@ -6,7 +6,6 @@ function Product(props) {
   return (
     <article className="Product">
       <h2>{props.data.productdisplayname}</h2>
-      <p>123</p>
       <img src={`https://kea-alt-del.dk/t7/images/webp/640/${props.data.id}.webp`} alt={props.data.productDisplayname} />
       <button onClick={add}>add to basket</button>
     </article>

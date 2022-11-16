@@ -17,9 +17,6 @@ img {
   display: grid;
   grid-template-columns: auto 200px;
 }
-.Header {
-  background-color: blue;
-}
 
 .ProductList {
   display: grid;
@@ -29,12 +26,7 @@ img {
 }
 
 .Product {
-  background-color: hotpink;
   h2 {
     height: 30px;
   }
-}
-
-.Basket {
-  background-color: yellowgreen;
 }

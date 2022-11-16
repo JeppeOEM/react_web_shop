@@ -4,7 +4,7 @@ import { insertOrder } from "../modules/db";
 
 function CheckoutForm(props) {
   const theForm = useRef(null);
-  const [patementCompleted, setPayementCompleted] = useState(false);
+  const [payementCompleted, setPayementCompleted] = useState(false);
 
   async function submit(e) {
     e.preventDefault();
@@ -25,7 +25,7 @@ function CheckoutForm(props) {
 
   return (
     <>
-      {patementCompleted ? (
+      {payementCompleted ? (
         <p>Thanks</p>
       ) : (
         <form onSubmit={submit} ref={theForm}>
